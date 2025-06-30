@@ -14,7 +14,7 @@ func SetupRoutes(app *fiber.App) {
 	// Route untuk homepage
 	api.Get("/", handler.Homepage)
 
-	api.Get("/mahasiswa", middleware.Middlewares("admin"), handler.GetAllMahasiswa)
+	api.Get("/mahasiswa", handler.GetAllMahasiswa)
 
 	api.Get("/mahasiswa/:npm", middleware.Middlewares("admin"), handler.GetMahasiswaByNPM)
 
